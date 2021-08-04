@@ -1,0 +1,109 @@
+/* SIDEBAR */
+
+.sidebarOption {
+  color: #000;
+  text-decoration: none;
+}
+
+.sidebarOption:hover {
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+
+.navText {
+  display: flex;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+  color: black;
+}
+
+.navText a {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.sidebarSpan {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.navText:hover {
+  background-color: #417aa7;
+  border-radius: 4px;
+}
+
+.navText:hover > * {
+  color: #fff;
+}
+
+.sidebarOption i {
+  font-size: 1.5rem;
+}
+
+/* CONTAINER / NAVBAR */
+
+.container {
+  background-color: #fff;
+  position: relative;
+  min-height: 90vh;
+}
+
+.navbar {
+  background-color: #f8f9fa;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.menuBars {
+  margin-left: 2rem;
+  font-size: 3rem;
+  flex: 0.9;
+}
+
+.navMenu {
+  background-color: #f8f9fa;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  z-index: 2;
+}
+
+.navMenu.active {
+  left: 0;
+  transition: 500ms;
+}
+
+.navMenuItems {
+  width: 100%;
+}
+
+.navbarToggle {
+  background-color: #f8f9fa;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.notFoundContainer {
+  background-color: red;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 3rem;
+}

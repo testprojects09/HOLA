@@ -1,0 +1,98 @@
+.navCont {
+  margin-top: 2.5rem;
+}
+
+.topbar {
+  background: #3fbbc0;
+  color: #fff;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.topbar.topbar-scrolled {
+  top: -40px;
+}
+
+.topbar i {
+  padding-right: 6px;
+}
+
+.brand {
+  color: #444444 !important;
+  font-size: 1.8rem !important;
+  font-weight: 600;
+}
+
+.brand img {
+  height: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.navLink {
+  color: #5b5b5b !important;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+
+.navLink {
+  display: inline-block;
+  position: relative;
+  color: hsl(222, 25%, 14%);
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3fbbc0;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.cartCont {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.cartCont span {
+  margin-right: 0.5rem;
+  color: #5b5b5b;
+}
+
+.rigthCont {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .navCont {
+    margin-top: 0;
+  }
+
+  .rigthCont {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .brand span {
+    display: none;
+  }
+}

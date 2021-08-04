@@ -1,0 +1,81 @@
+.citasContAcc {
+  color: #444444 !important;
+}
+
+.title {
+  text-align: center;
+  color: #444444;
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #3fbbc0;
+  bottom: -5px;
+  left: calc(50% - 25px);
+}
+
+.infoContainer {
+  transition: all 500ms linear;
+}
+
+/* CARDS */
+
+.card {
+  min-height: 12rem;
+  padding: 1rem;
+}
+
+.rowContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* WELCOME ACCOUNT PAGE */
+
+.contentDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 4rem;
+  padding-left: 5rem;
+}
+
+.welcomeDiv {
+  background-color: #417aa7;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50rem;
+}
+
+.welcomeDiv h1 {
+  border-bottom: 2px solid white;
+  padding: 0 2rem 0.3rem 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.welcomeDiv h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.welcomeDiv p {
+  font-size: 1.25rem;
+  text-align: center;
+}

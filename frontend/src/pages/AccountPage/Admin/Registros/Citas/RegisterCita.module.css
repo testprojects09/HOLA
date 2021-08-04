@@ -1,0 +1,37 @@
+.container {
+  color: #444444 !important;
+}
+
+.sectionSubtitle {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-right: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.input {
+  height: 3rem !important;
+}
+
+.wrapper {
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+  margin-top: 0rem;
+  margin-bottom: 0.2rem;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #3fbbc0;
+  bottom: -12px;
+  left: calc(50% - 50px);
+}
