@@ -3,11 +3,13 @@ import os
 from flask import Flask
 from flask_cors import CORS, cross_origin
 
+@cross_origin()
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, static_folder="../frontend/build", static_url_path="")
     # app = Flask(__name__, instance_relative_config=True, static_folder="frontend/build", static_url_path="")
-    CORS(app)
+    # app = Flask(__name__, instance_relative_config=True)
+    # CORS(app)
     app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'veterinary.sqlite'),
@@ -32,11 +34,11 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, Worldsdsd!'
 
-    @app.route("/")
-    @cross_origin()
-    def serve():
-        # return "h"
-        return send_from_directory(app.static_folder, 'index.html')
+    # @app.route("/")
+    # @cross_origin()
+    # def serve():
+    #     # return "h"
+    #     return send_from_directory(app.static_folder, 'index.html')
 
 
     from . import db
