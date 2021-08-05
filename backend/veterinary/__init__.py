@@ -5,7 +5,8 @@ from flask_cors import CORS, cross_origin
 
 def create_app(test_config=None):
     # create and configure the app
-    app = Flask(__name__, instance_relative_config=True, static_folder="../frontend/build", static_url_path="")
+    app = Flask(__name__, static_folder="../frontend/build", static_url_path="")
+    # app = Flask(__name__, instance_relative_config=True, static_folder="frontend/build", static_url_path="")
     CORS(app)
     app.config.from_mapping(
         SECRET_KEY='dev',
@@ -29,11 +30,12 @@ def create_app(test_config=None):
     @app.route('/hello')
     @cross_origin()
     def hello():
-        return 'Hello, World!'
+        return 'Hello, Worldsdsd!'
 
     @app.route("/")
     @cross_origin()
-    def serve(app):
+    def serve():
+        # return "h"
         return send_from_directory(app.static_folder, 'index.html')
 
 
